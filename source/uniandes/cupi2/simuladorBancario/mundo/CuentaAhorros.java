@@ -89,4 +89,9 @@ public class CuentaAhorros
     {
         saldo = saldo + ( saldo * interesMensual );
     }
+    
+    public void cambiarSaldo(double pSaldo) {
+        saldo = pSaldo;
+    }
+
 }
