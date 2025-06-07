@@ -90,7 +90,7 @@ public class InterfazSimulador extends JFrame
         setSize( 600, 580 );
         setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 
-        cuenta = new SimuladorBancario( "50.152.468", "Sergio L�pez" );
+        cuenta = new SimuladorBancario( "1.041.976.808", "Juan David Castro Villarreal" );
 
         panelCDT = new PanelCDT( this );
         panelAhorros = new PanelAhorros( this );
@@ -108,7 +108,7 @@ public class InterfazSimulador extends JFrame
         panelCentral.setLayout( new BorderLayout( ) );
         JPanel panelTransacciones = new JPanel( );
         panelTransacciones.setLayout( new GridLayout( 4, 1 ) );
-        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Informaci�n Bancaria" ) ) );
+        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Informaci�n Bancaria" ) ) );
 
         getContentPane( ).add( panelImagen, BorderLayout.NORTH );
         getContentPane( ).add( panelCentral, BorderLayout.CENTER );
@@ -177,7 +177,7 @@ public class InterfazSimulador extends JFrame
             }
             catch( Exception e )
             {
-                JOptionPane.showMessageDialog( this, "Se ingres� un monto de dinero o inter�s inv�lido.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero o inter�s invalidolido.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
             }
         }
     }
@@ -219,7 +219,7 @@ public class InterfazSimulador extends JFrame
         }
         catch( Exception e )
         {
-            JOptionPane.showMessageDialog( this, "Se ingres� un monto de dinero inv�lido.", "Retirar", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero invalido.", "Retirar", JOptionPane.ERROR_MESSAGE );
 
         }
     }
@@ -247,7 +247,7 @@ public class InterfazSimulador extends JFrame
         }
         catch( Exception e )
         {
-            JOptionPane.showMessageDialog( this, "Se ingres� un monto de dinero inv�lido.", "Consignar", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero invalido.", "Consignar", JOptionPane.ERROR_MESSAGE );
 
         }
     }
@@ -279,7 +279,7 @@ public class InterfazSimulador extends JFrame
         }
         catch( Exception e )
         {
-            JOptionPane.showMessageDialog( this, "Se ingres� un monto de dinero inv�lido.", "Retirar", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero invalido.", "Retirar", JOptionPane.ERROR_MESSAGE );
         }
     }
 
@@ -305,7 +305,7 @@ public class InterfazSimulador extends JFrame
         }
         catch( Exception e )
         {
-            JOptionPane.showMessageDialog( this, "Se ingres� un monto de dinero inv�lido.", "Consignar", JOptionPane.ERROR_MESSAGE );
+            JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero invalido.", "Consignar", JOptionPane.ERROR_MESSAGE );
 
         }
     }
@@ -343,8 +343,8 @@ public class InterfazSimulador extends JFrame
     public void reqFuncOpcion1( )
     {
         try {
-            String strMesInicio = JOptionPane.showInputDialog(this, "Ingrese el mes de inicio del período:", "Saldo Promedio", JOptionPane.QUESTION_MESSAGE);
-            String strMesFin = JOptionPane.showInputDialog(this, "Ingrese el mes de fin del período:", "Saldo Promedio", JOptionPane.QUESTION_MESSAGE);
+            String strMesInicio = JOptionPane.showInputDialog(this, "Ingrese el mes de inicio del periodo:", "Saldo Promedio", JOptionPane.QUESTION_MESSAGE);
+            String strMesFin = JOptionPane.showInputDialog(this, "Ingrese el mes de fin del periodo:", "Saldo Promedio", JOptionPane.QUESTION_MESSAGE);
 
             if (strMesInicio != null && strMesFin != null) {
                 int mesInicio = Integer.parseInt(strMesInicio);
@@ -355,7 +355,7 @@ public class InterfazSimulador extends JFrame
                 JOptionPane.showMessageDialog(this, mensaje, "Saldo Promedio", JOptionPane.INFORMATION_MESSAGE);
             }
         } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Debe ingresar valores numéricos válidos.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Debe ingresar valores numericos validos.", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (IllegalArgumentException e) {
             JOptionPane.showMessageDialog(this, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -376,7 +376,7 @@ public class InterfazSimulador extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Ejecuta la aplicaci�n.
+     * Ejecuta la aplicaci�n.
      * @param pArgs Par�metros de la ejecuci�n. No son necesarios.
      */
     public static void main( String[] pArgs )
