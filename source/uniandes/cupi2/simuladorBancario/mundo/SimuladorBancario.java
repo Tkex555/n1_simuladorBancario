@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -20,7 +20,7 @@ public class SimuladorBancario
     // -----------------------------------------------------------------
 
     /**
-     * Cédula del cliente.
+     * Cedula del cliente.
      */
     private String cedula;
 
@@ -50,13 +50,13 @@ public class SimuladorBancario
     private CDT inversion;
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Inicializa el simulador con la información del cliente. <br>
-     * <b>post: </b> El mes fue inicializado en 1, y las tres cuentas (CDT, corriente y de ahorros) fueron inicializadas como vacías. <br>
-     * @param pCedula Cédula del nuevo cliente. pCedula != null && pCedula != "".
+     * Inicializa el simulador con la informaciï¿½n del cliente. <br>
+     * <b>post: </b> El mes fue inicializado en 1, y las tres cuentas (CDT, corriente y de ahorros) fueron inicializadas como vacï¿½as. <br>
+     * @param pCedula Cï¿½dula del nuevo cliente. pCedula != null && pCedula != "".
      * @param pNombre Nombre del nuevo cliente. pNombre != null && pNombre != "".
      */
     public SimuladorBancario( String pCedula, String pNombre )
@@ -66,7 +66,7 @@ public class SimuladorBancario
         cedula = pCedula;
         // Inicializa el mes en el 1
         mesActual = 1;
-        // Inicializa las tres cuentas en vacío
+        // Inicializa las tres cuentas en vacï¿½o
         corriente = new CuentaCorriente( );
         ahorros = new CuentaAhorros( );
         inversion = new CDT( );
@@ -82,8 +82,8 @@ public class SimuladorBancario
     }
 
     /**
-     * Retorna la cédula del cliente.
-     * @return Cédula del cliente.
+     * Retorna la cï¿½dula del cliente.
+     * @return Cï¿½dula del cliente.
      */
     public String darCedula( )
     {
@@ -118,7 +118,7 @@ public class SimuladorBancario
     }
 
     /**
-     * Retorna el mes en el que se encuentra la simulación.
+     * Retorna el mes en el que se encuentra la simulaciï¿½n.
      * @return Mes actual.
      */
     public int darMesActual( )
@@ -137,9 +137,9 @@ public class SimuladorBancario
 
     /**
      * Invierte un monto de dinero en un CDT. <br>
-     * <b>post: </b> Invirtió un monto de dinero en un CDT.
+     * <b>post: </b> Invirtiï¿½ un monto de dinero en un CDT.
      * @param pMonto Monto de dinero a invertir en un CDT. pMonto > 0.
-     * @param pInteresMensual Interés del CDT elegido por el cliente. pInteresMensual > 0.
+     * @param pInteresMensual Interï¿½s del CDT elegido por el cliente. pInteresMensual > 0.
      */
     public void invertirCDT( double pMonto, double pInteresMensual )
     {
@@ -148,7 +148,7 @@ public class SimuladorBancario
 
     /**
      * Consigna un monto de dinero en la cuenta corriente. <br>
-     * <b>post: </b> Consignó un monto de dinero en la cuenta corriente.
+     * <b>post: </b> Consignï¿½ un monto de dinero en la cuenta corriente.
      * @param pMonto Monto de dinero a consignar en la cuenta. pMonto > 0.
      */
     public void consignarCuentaCorriente( double pMonto )
@@ -158,7 +158,7 @@ public class SimuladorBancario
 
     /**
      * Consigna un monto de dinero en la cuenta de ahorros. <br>
-     * * <b>post: </b> Consignó un monto de dinero en la cuenta de ahorros.
+     * * <b>post: </b> Consignï¿½ un monto de dinero en la cuenta de ahorros.
      * @param pMonto Monto de dinero a consignar en la cuenta. pMonto > 0.
      */
     public void consignarCuentaAhorros( double pMonto )
@@ -187,8 +187,8 @@ public class SimuladorBancario
     }
 
     /**
-     * Avanza en un mes la simulación. <br>
-     * <b>post: </b> Se avanzó el mes de la simulación en 1. Se actualizó el saldo de la cuenta de ahorros.
+     * Avanza en un mes la simulaciï¿½n. <br>
+     * <b>post: </b> Se avanzï¿½ el mes de la simulaciï¿½n en 1. Se actualizï¿½ el saldo de la cuenta de ahorros.
      */
     public void avanzarMesSimulacion( )
     {
@@ -199,7 +199,7 @@ public class SimuladorBancario
     /**
      * Cierra el CDT, pasando el saldo a la cuenta corriente. <br>
      * <b>pre: </b> La cuenta corriente y el CDT han sido inicializados. <br>
-     * <b>post: </b> El CDT quedó cerrado y con valores en 0, y la cuenta corriente aumentó su saldo en el valor del cierre del CDT.
+     * <b>post: </b> El CDT quedï¿½ cerrado y con valores en 0, y la cuenta corriente aumentï¿½ su saldo en el valor del cierre del CDT.
      */
     public void cerrarCDT( )
     {
@@ -208,7 +208,7 @@ public class SimuladorBancario
     }
 
     /**
-     * Retorna el resultado de la extensión 1.
+     * Retorna el resultado de la extensiï¿½n 1.
      * @return Respuesta 1.
      */
     public String metodo1( )
@@ -217,11 +217,71 @@ public class SimuladorBancario
     }
 
     /**
-     * Retorna el resultado de la extensión 2.
+     * Retorna el resultado de la extensiï¿½n 2.
      * @return Respuesta 2.
      */
     public String metodo2( )
     {
         return "Respuesta 2";
     }
+
+    /**
+     * Calcula el saldo promedio de las cuentas del cliente.
+     * @return Saldo promedio de las cuentas del cliente.
+     */
+    public double calcularSaldoPromedio( )
+    {
+        double saldoTotal = calcularSaldoTotal( );
+        if ( mesActual > 0 )
+        {
+            return saldoTotal / mesActual;
+        }
+        return 0;
+    }
+
+    /**
+     * Calcula el saldo promedio de las cuentas del cliente en un perÃ­odo determinado.
+     * @param mesInicio Mes de inicio del perÃ­odo. mesInicio > 0.
+     * @param mesFin Mes de fin del perÃ­odo. mesFin >= mesInicio.
+     * @return Saldo promedio de las cuentas del cliente en el perÃ­odo.
+     */
+    public double calcularSaldoPromedioEnPeriodo(int mesInicio, int mesFin) {
+        if (mesInicio <= 0 || mesFin < mesInicio) {
+            throw new IllegalArgumentException("El período especificado no es válido.");
+        }
+
+        double saldoTotal = 0;
+        int meses = mesFin - mesInicio + 1;
+
+        // Guardar estado original para restaurar al final
+        int mesOriginal = mesActual;
+        double saldoAhorrosTemp = ahorros.darSaldo();
+
+        for (int mes = 1; mes < mesInicio; mes++) {
+            // Simular actualización de saldo de ahorros al avanzar meses previos
+            saldoAhorrosTemp *= (1 + ahorros.darInteresMensual());
+        }
+
+        for (int mes = mesInicio; mes <= mesFin; mes++) {
+            mesActual = mes; // Cambiar mes para CDT y corriente
+
+            if (mes > mesInicio) {
+                // Actualizar saldo de ahorros con interés
+                saldoAhorrosTemp *= (1 + ahorros.darInteresMensual());
+            }
+
+            double valorCDT = inversion.calcularValorPresente(mesActual);
+            double saldoCorrienteActual = corriente.darSaldo();
+
+            saldoTotal += saldoAhorrosTemp + saldoCorrienteActual + valorCDT;
+        }
+
+        // Restaurar estado original
+        mesActual = mesOriginal;
+
+        return saldoTotal / meses;
+    }
+
+
+
 }
