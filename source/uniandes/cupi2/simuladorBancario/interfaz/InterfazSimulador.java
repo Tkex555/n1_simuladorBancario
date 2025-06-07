@@ -108,7 +108,7 @@ public class InterfazSimulador extends JFrame
         panelCentral.setLayout( new BorderLayout( ) );
         JPanel panelTransacciones = new JPanel( );
         panelTransacciones.setLayout( new GridLayout( 4, 1 ) );
-        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Informaciï¿½n Bancaria" ) ) );
+        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Información Bancaria" ) ) );
 
         getContentPane( ).add( panelImagen, BorderLayout.NORTH );
         getContentPane( ).add( panelCentral, BorderLayout.CENTER );
@@ -177,7 +177,7 @@ public class InterfazSimulador extends JFrame
             }
             catch( Exception e )
             {
-                JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero o interï¿½s invalidolido.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero o interes invalidO.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
             }
         }
     }

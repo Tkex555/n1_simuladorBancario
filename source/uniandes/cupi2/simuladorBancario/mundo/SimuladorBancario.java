@@ -223,7 +223,7 @@ public class SimuladorBancario
     public String metodo2( )
     {
         StringBuilder resumen = new StringBuilder();
-        resumen.append("=== Resumen de Transacciones del Mes " + mesActual + " ===\n\n");
+        resumen.append(" Resumen de Transacciones del Mes " + mesActual + " \n\n");
         
         // Resumen Cuenta Corriente
         resumen.append("CUENTA CORRIENTE:\n");
@@ -232,16 +232,16 @@ public class SimuladorBancario
         // Resumen Cuenta Ahorros
         resumen.append("\nCUENTA DE AHORROS:\n");
         resumen.append("Saldo actual: " + formatearValor(ahorros.darSaldo()) + "\n");
-        resumen.append("Interés mensual: " + (ahorros.darInteresMensual() * 100) + "%\n");
+        resumen.append("Interes mensual: " + (ahorros.darInteresMensual() * 100) + "%\n");
         
         // Resumen CDT
         resumen.append("\nCDT:\n");
         double valorCDT = inversion.calcularValorPresente(mesActual);
         if (valorCDT > 0) {
             resumen.append("Valor actual: " + formatearValor(valorCDT) + "\n");
-            resumen.append("Interés: " + (inversion.darInteresMensual() * 100) + "%\n");
+            resumen.append("Interes: " + (inversion.darInteresMensual() * 100) + "%\n");
         } else {
-            resumen.append("No hay inversión activa\n");
+            resumen.append("No hay inversion activa\n");
         }
         
         // Resumen Total
@@ -281,7 +281,7 @@ public class SimuladorBancario
      */
     public double calcularSaldoPromedioEnPeriodo(int mesInicio, int mesFin) {
         if (mesInicio <= 0 || mesFin < mesInicio) {
-            throw new IllegalArgumentException("El per�odo especificado no es v�lido.");
+            throw new IllegalArgumentException("El periodo especificado no es valido.");
         }
 
         double saldoTotal = 0;
