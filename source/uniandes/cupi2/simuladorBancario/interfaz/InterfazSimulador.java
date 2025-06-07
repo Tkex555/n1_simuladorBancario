@@ -177,7 +177,7 @@ public class InterfazSimulador extends JFrame
             }
             catch( Exception e )
             {
-                JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero o interï¿½s invalidolido.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "Se ingreso un monto de dinero o interes invalidO.", "Invertir en CDT", JOptionPane.ERROR_MESSAGE );
             }
         }
     }
@@ -366,9 +366,16 @@ public class InterfazSimulador extends JFrame
      */
     public void reqFuncOpcion2( )
     {
-        String respuesta = cuenta.metodo2( );
-        actualizar( );
-        JOptionPane.showMessageDialog( this, respuesta, "Respuesta.", JOptionPane.INFORMATION_MESSAGE );
+        String resumen = cuenta.metodo2();
+        JTextArea textArea = new JTextArea(resumen);
+        textArea.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new Dimension(400, 300));
+        
+        JOptionPane.showMessageDialog(this, 
+                                    scrollPane, 
+                                    "Resumen de Transacciones", 
+                                    JOptionPane.INFORMATION_MESSAGE);
     }
 
     // -----------------------------------------------------------------
@@ -376,7 +383,7 @@ public class InterfazSimulador extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Ejecuta la aplicación.
+     * Ejecuta la aplicaciï¿½n.
      * @param pArgs Parï¿½metros de la ejecuciï¿½n. No son necesarios.
      */
     public static void main( String[] pArgs )
