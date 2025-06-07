@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogota - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -26,7 +26,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 /**
- * Panel con las opciones de la aplicación.
+ * Panel con las opciones de la aplicaciï¿½n.
  */
 @SuppressWarnings("serial")
 public class PanelCDT extends JPanel implements ActionListener
@@ -85,8 +85,8 @@ public class PanelCDT extends JPanel implements ActionListener
 
     /**
      * Crea un nuevo panel e inicializa sus elementos. <br>
-     * <b>post: </b> Se inicializó el panel.
-     * @param pPrincipal Ventana principal de la aplicación. pPrincipal != null.
+     * <b>post: </b> Se inicializï¿½ el panel.
+     * @param pPrincipal Ventana principal de la aplicaciï¿½n. pPrincipal != null.
      */
     public PanelCDT( InterfazSimulador pPrincipal )
     {
@@ -130,12 +130,12 @@ public class PanelCDT extends JPanel implements ActionListener
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
      * Actualiza el saldo del CDT del cliente en la interfaz. <br>
-     * <b>post: </b> Se actualizó la información con el saldo en CDT.
+     * <b>post: </b> Se actualizï¿½ la informaciï¿½n con el saldo en CDT.
      * @param pSaldo Saldo en el CDT del cliente. pSaldo != null.
      */
     public void actualizarSaldoCDT( String pSaldo )
@@ -145,17 +145,17 @@ public class PanelCDT extends JPanel implements ActionListener
 
     /**
      * Manejo de los eventos de los botones.
-     * @param pEvento Evento de click sobre un botón. pEvento != null.
+     * @param pEvento Evento de click sobre un botï¿½n. pEvento != null.
      */
     public void actionPerformed( ActionEvent pEvento )
     {
         String command = pEvento.getActionCommand( );
         if( command.equals( ABRIR_CDT ) )
         {
-            String strValor = JOptionPane.showInputDialog( principal, "Introduzca el monto de dinero de la inversión", "Abrir CDT", JOptionPane.QUESTION_MESSAGE );
+            String strValor = JOptionPane.showInputDialog( principal, "Introduzca el monto de dinero de la inversiï¿½n", "Abrir CDT", JOptionPane.QUESTION_MESSAGE );
             if( strValor != null )
             {
-                String strInteres = JOptionPane.showInputDialog( principal, "Introduzca el interés mensual en porcentaje", "Abrir CDT", JOptionPane.QUESTION_MESSAGE );
+                String strInteres = JOptionPane.showInputDialog( principal, "Introduzca el interï¿½s mensual en porcentaje", "Abrir CDT", JOptionPane.QUESTION_MESSAGE );
                 if( strInteres != null )
                 {
                     principal.invertirCDT( strValor, strInteres );

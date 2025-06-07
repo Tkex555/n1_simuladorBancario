@@ -72,7 +72,7 @@ public class InterfazSimulador extends JFrame
     private PanelSaldos panelSaldos;
 
     /**
-     * Panel de visualizaciï¿½n de datos personales.
+     * Panel de visualizacion de datos personales.
      */
     private PanelDatosCliente panelDatos;
 
@@ -108,7 +108,7 @@ public class InterfazSimulador extends JFrame
         panelCentral.setLayout( new BorderLayout( ) );
         JPanel panelTransacciones = new JPanel( );
         panelTransacciones.setLayout( new GridLayout( 4, 1 ) );
-        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Información Bancaria" ) ) );
+        panelTransacciones.setBorder( new CompoundBorder( new EmptyBorder( 0, 0, 5, 0 ), new TitledBorder( "Informaciï¿½n Bancaria" ) ) );
 
         getContentPane( ).add( panelImagen, BorderLayout.NORTH );
         getContentPane( ).add( panelCentral, BorderLayout.CENTER );
