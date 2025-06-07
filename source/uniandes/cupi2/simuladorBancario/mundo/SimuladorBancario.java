@@ -222,7 +222,41 @@ public class SimuladorBancario
      */
     public String metodo2( )
     {
-        return "Respuesta 2";
+        StringBuilder resumen = new StringBuilder();
+        resumen.append("=== Resumen de Transacciones del Mes " + mesActual + " ===\n\n");
+        
+        // Resumen Cuenta Corriente
+        resumen.append("CUENTA CORRIENTE:\n");
+        resumen.append("Saldo actual: " + formatearValor(corriente.darSaldo()) + "\n");
+        
+        // Resumen Cuenta Ahorros
+        resumen.append("\nCUENTA DE AHORROS:\n");
+        resumen.append("Saldo actual: " + formatearValor(ahorros.darSaldo()) + "\n");
+        resumen.append("InterÃ©s mensual: " + (ahorros.darInteresMensual() * 100) + "%\n");
+        
+        // Resumen CDT
+        resumen.append("\nCDT:\n");
+        double valorCDT = inversion.calcularValorPresente(mesActual);
+        if (valorCDT > 0) {
+            resumen.append("Valor actual: " + formatearValor(valorCDT) + "\n");
+            resumen.append("InterÃ©s: " + (inversion.darInteresMensual() * 100) + "%\n");
+        } else {
+            resumen.append("No hay inversiÃ³n activa\n");
+        }
+        
+        // Resumen Total
+        resumen.append("\nSALDO TOTAL: " + formatearValor(calcularSaldoTotal()) + "\n");
+        
+        return resumen.toString();
+    }
+
+    /**
+     * Formatea un valor numÃ©rico para presentar en el resumen.
+     * @param valor Valor a formatear
+     * @return Valor formateado como String
+     */
+    private String formatearValor(double valor) {
+        return String.format("$%,.2f", valor);
     }
 
     /**
@@ -247,7 +281,7 @@ public class SimuladorBancario
      */
     public double calcularSaldoPromedioEnPeriodo(int mesInicio, int mesFin) {
         if (mesInicio <= 0 || mesFin < mesInicio) {
-            throw new IllegalArgumentException("El período especificado no es válido.");
+            throw new IllegalArgumentException("El perï¿½odo especificado no es vï¿½lido.");
         }
 
         double saldoTotal = 0;
@@ -258,7 +292,7 @@ public class SimuladorBancario
         double saldoAhorrosTemp = ahorros.darSaldo();
 
         for (int mes = 1; mes < mesInicio; mes++) {
-            // Simular actualización de saldo de ahorros al avanzar meses previos
+            // Simular actualizaciï¿½n de saldo de ahorros al avanzar meses previos
             saldoAhorrosTemp *= (1 + ahorros.darInteresMensual());
         }
 
@@ -266,7 +300,7 @@ public class SimuladorBancario
             mesActual = mes; // Cambiar mes para CDT y corriente
 
             if (mes > mesInicio) {
-                // Actualizar saldo de ahorros con interés
+                // Actualizar saldo de ahorros con interï¿½s
                 saldoAhorrosTemp *= (1 + ahorros.darInteresMensual());
             }
 
